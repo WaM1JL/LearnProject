@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BeginerLearnProjrct {
     class Sort<T> where T: IComparable<T> {
@@ -11,13 +7,28 @@ namespace BeginerLearnProjrct {
             a = b;
             b = c;
         }
-        public static void BubbleSort(T [] arr) { 
+        public static void BubbleSort(T[] arr) { 
             for(int i = 0;i < arr.Length; i++) {
                 for(int j = 0;j < arr.Length - 1; j++) {
                     if(arr[j].CompareTo(arr[j + 1]) > 0) {
                         Swap(ref arr[j], ref arr[j + 1]);
                     }
                 }
+            }
+        }
+        public static void InsertSort(T[] arr) {
+            T min;
+            int ind_min;
+            for(int i = 0;i < arr.Length; i++) {
+                min = arr[i];
+                ind_min = i;
+                for(int j = i + 1;j < arr.Length; j++) {
+                    if(min.CompareTo(arr[j]) > 0) {
+                        min = arr[j];
+                        ind_min = j;
+                    }
+                }
+                Swap(ref arr[i], ref arr[ind_min]);
             }
         }
     }

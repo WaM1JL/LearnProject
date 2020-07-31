@@ -26,6 +26,8 @@
             this.buttonGenerate = new System.Windows.Forms.Button();
             this.buttonSort = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.radioButtonBubble = new System.Windows.Forms.RadioButton();
+            this.radioButtonInsert = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // buttonGenerate
@@ -52,21 +54,50 @@
             // 
             this.richTextBox1.Location = new System.Drawing.Point(343, 27);
             this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(445, 268);
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
+            // 
+            // radioButtonBubble
+            // 
+            this.radioButtonBubble.AutoSize = true;
+            this.radioButtonBubble.Checked = true;
+            this.radioButtonBubble.Location = new System.Drawing.Point(49, 55);
+            this.radioButtonBubble.Name = "radioButtonBubble";
+            this.radioButtonBubble.Size = new System.Drawing.Size(78, 17);
+            this.radioButtonBubble.TabIndex = 4;
+            this.radioButtonBubble.TabStop = true;
+            this.radioButtonBubble.Text = "Bubble sort";
+            this.radioButtonBubble.UseVisualStyleBackColor = true;
+            this.radioButtonBubble.CheckedChanged += new System.EventHandler(this.radioButtonBubble_CheckedChanged);
+            // 
+            // radioButtonInsert
+            // 
+            this.radioButtonInsert.AutoSize = true;
+            this.radioButtonInsert.Location = new System.Drawing.Point(49, 89);
+            this.radioButtonInsert.Name = "radioButtonInsert";
+            this.radioButtonInsert.Size = new System.Drawing.Size(73, 17);
+            this.radioButtonInsert.TabIndex = 5;
+            this.radioButtonInsert.TabStop = true;
+            this.radioButtonInsert.Text = "Insert Sort";
+            this.radioButtonInsert.UseVisualStyleBackColor = true;
+            this.radioButtonInsert.CheckedChanged += new System.EventHandler(this.radioButtonInsert_CheckedChanged);
             // 
             // FormSort
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.radioButtonInsert);
+            this.Controls.Add(this.radioButtonBubble);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.buttonSort);
             this.Controls.Add(this.buttonGenerate);
             this.Name = "FormSort";
             this.Text = "Sort";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -75,6 +106,8 @@
         private System.Windows.Forms.Button buttonGenerate;
         private System.Windows.Forms.Button buttonSort;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RadioButton radioButtonBubble;
+        private System.Windows.Forms.RadioButton radioButtonInsert;
     }
 }
 
