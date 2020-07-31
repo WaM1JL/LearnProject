@@ -28,6 +28,7 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.radioButtonBubble = new System.Windows.Forms.RadioButton();
             this.radioButtonInsert = new System.Windows.Forms.RadioButton();
+            this.radioButtonGnome = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // buttonGenerate
@@ -79,16 +80,27 @@
             this.radioButtonInsert.Name = "radioButtonInsert";
             this.radioButtonInsert.Size = new System.Drawing.Size(73, 17);
             this.radioButtonInsert.TabIndex = 5;
-            this.radioButtonInsert.TabStop = true;
             this.radioButtonInsert.Text = "Insert Sort";
             this.radioButtonInsert.UseVisualStyleBackColor = true;
             this.radioButtonInsert.CheckedChanged += new System.EventHandler(this.radioButtonInsert_CheckedChanged);
+            // 
+            // radioButtonGnome
+            // 
+            this.radioButtonGnome.AutoSize = true;
+            this.radioButtonGnome.Location = new System.Drawing.Point(49, 122);
+            this.radioButtonGnome.Name = "radioButtonGnome";
+            this.radioButtonGnome.Size = new System.Drawing.Size(81, 17);
+            this.radioButtonGnome.TabIndex = 6;
+            this.radioButtonGnome.Text = "Gnome Sort";
+            this.radioButtonGnome.UseVisualStyleBackColor = true;
+            this.radioButtonGnome.CheckedChanged += new System.EventHandler(this.radioButtonGnome_CheckedChanged);
             // 
             // FormSort
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.radioButtonGnome);
             this.Controls.Add(this.radioButtonInsert);
             this.Controls.Add(this.radioButtonBubble);
             this.Controls.Add(this.richTextBox1);
@@ -108,6 +120,7 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.RadioButton radioButtonBubble;
         private System.Windows.Forms.RadioButton radioButtonInsert;
+        private System.Windows.Forms.RadioButton radioButtonGnome;
     }
 }
 

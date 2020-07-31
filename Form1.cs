@@ -13,7 +13,7 @@ namespace BeginerLearnProjrct {
             if(richTextBox1.Text != "") {
                 richTextBox1.Text += "\n\n";
             }
-            richTextBox1.Text += "Исходный массив";
+            richTextBox1.Text += "Исходный массив: ";
             for(int i = 0;i < arr.Length; i++) {
                 arr[i] = rnd.Next(-2056, 2056);
                 richTextBox1.Text += arr[i].ToString() + " ";
@@ -27,11 +27,14 @@ namespace BeginerLearnProjrct {
                 case '2':
                     Sort<int>.InsertSort(arr);
                     break;
+                case '3':
+                    Sort<int>.GnomeSort(arr);
+                    break;
                 default:
                     Sort<int>.BubbleSort(arr);
                     break;
             }
-            richTextBox1.Text += "\n\nОтсортированный массив";
+            richTextBox1.Text += "\n\nОтсортированный массив: ";
             for(int i = 0; i < arr.Length; i++) {
                 richTextBox1.Text += arr[i].ToString() + " ";
             }
@@ -41,6 +44,9 @@ namespace BeginerLearnProjrct {
         }
         private void radioButtonInsert_CheckedChanged(object sender, EventArgs e) {
             mode = '2';
+        }
+        private void radioButtonGnome_CheckedChanged(object sender, EventArgs e) {
+            mode = '3';
         }
     }
 }
