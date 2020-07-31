@@ -45,5 +45,42 @@ namespace BeginerLearnProjrct {
                 }
             }
         }
+        public static void QuickSort(T[] arr, int left, int right) {
+            T pivot = arr[left];
+            bool l = false;
+            bool r = false;
+            int p_right = right;
+            int p_left = left + 1;
+            while(p_left <= p_right) {
+                if(l == false) {
+                    if(pivot.CompareTo(arr[p_left]) > 0) {
+                        p_left++;
+                    }
+                    else {
+                        l = true;
+                    }
+                }
+                if(r == false) {
+                    if(pivot.CompareTo(arr[p_right]) <= 0) {
+                        p_right--;
+                    }
+                    else {
+                        r = true;
+                    }
+                }
+                if(l == true && r == true) {
+                    Swap(ref arr[p_left], ref arr[p_right]);
+                    l = false;
+                    r = false;
+                }
+            }
+            Swap(ref arr[left], ref arr[p_right]);
+            if(p_right - left > 1) {
+                QuickSort(arr, left, p_right - 1);
+            }
+            if(right - p_right > 1) {
+                QuickSort(arr, p_right + 1, right);
+            }
+        }
     }
 }

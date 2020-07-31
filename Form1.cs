@@ -30,6 +30,9 @@ namespace BeginerLearnProjrct {
                 case '3':
                     Sort<int>.GnomeSort(arr);
                     break;
+                case '4':
+                    Sort<int>.QuickSort(arr, 0, arr.Length - 1);
+                    break;
                 default:
                     Sort<int>.BubbleSort(arr);
                     break;
@@ -47,6 +50,9 @@ namespace BeginerLearnProjrct {
         }
         private void radioButtonGnome_CheckedChanged(object sender, EventArgs e) {
             mode = '3';
+        }
+        private void radioButtonQuick_CheckedChanged(object sender, EventArgs e) {
+            mode = '4';
         }
     }
 }
