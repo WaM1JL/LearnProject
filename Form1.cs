@@ -54,5 +54,9 @@ namespace BeginerLearnProjrct {
         private void radioButtonQuick_CheckedChanged(object sender, EventArgs e) {
             mode = '4';
         }
+
+        private void buttonClear_Click(object sender, EventArgs e) {
+            richTextBox1.Text = "";
+        }
     }
 }

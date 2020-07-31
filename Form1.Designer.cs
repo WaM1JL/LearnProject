@@ -30,6 +30,7 @@
             this.radioButtonInsert = new System.Windows.Forms.RadioButton();
             this.radioButtonGnome = new System.Windows.Forms.RadioButton();
             this.radioButtonQuick = new System.Windows.Forms.RadioButton();
+            this.buttonClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonGenerate
@@ -107,11 +108,22 @@
             this.radioButtonQuick.UseVisualStyleBackColor = true;
             this.radioButtonQuick.CheckedChanged += new System.EventHandler(this.radioButtonQuick_CheckedChanged);
             // 
+            // buttonClear
+            // 
+            this.buttonClear.Location = new System.Drawing.Point(477, 380);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(187, 40);
+            this.buttonClear.TabIndex = 8;
+            this.buttonClear.Text = "Clear";
+            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
             // FormSort
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.radioButtonQuick);
             this.Controls.Add(this.radioButtonGnome);
             this.Controls.Add(this.radioButtonInsert);
@@ -135,6 +147,7 @@
         private System.Windows.Forms.RadioButton radioButtonInsert;
         private System.Windows.Forms.RadioButton radioButtonGnome;
         private System.Windows.Forms.RadioButton radioButtonQuick;
+        private System.Windows.Forms.Button buttonClear;
     }
 }
 
